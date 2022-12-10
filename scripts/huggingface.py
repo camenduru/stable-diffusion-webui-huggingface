@@ -34,7 +34,7 @@ def on_ui_tabs():
     with gr.Blocks() as huggingface:
         gr.Markdown(
         """
-        ### Push Model Folder to 🤗 Hugging Face
+        ### Push Folder to 🤗 Hugging Face
         ckpt_model_from = 🖼 Windows: C:\\Users\\PC\\Desktop\\MyModelFolder 🐧 Linux: /home/user/app/stable-diffusion-webui/my-model-folder<br />
         ckpt_model_to = camenduru/mymodel <br />
         branch = main <br />
