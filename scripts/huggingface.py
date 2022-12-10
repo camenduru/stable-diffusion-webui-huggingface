@@ -27,7 +27,7 @@ def push_ckpt(model_from, model_to, token, branch):
         else:
             create_branch(model_to, branch=branch, token=token)    
     upload_folder(folder_path=model_from, path_in_repo="", revision=branch, repo_id=model_to, commit_message=f"ckpt", token=token)
-    return "push ckpt done!"
+    return "push folder done!"
     
 
 def on_ui_tabs():     
