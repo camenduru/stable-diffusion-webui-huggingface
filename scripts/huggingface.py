@@ -30,7 +30,6 @@ def push_folder(folder_from, folder_to, branch, token):
     return "push folder done!"
  
 def push_file(file_from, file_to, file_name, branch, token):
-    print(file_from)
     try:
         repo_exists = True
         r_info = model_info(file_to, token=token)
