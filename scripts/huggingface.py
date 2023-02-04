@@ -103,10 +103,14 @@ def on_ui_tabs():
         gr.Markdown(
         """
         ### 🦒 Colab Run Command
-        model: <pre>`wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors`</pre><br />
-        lora:  <pre>`wget https://huggingface.co/embed/Sakimi-Chan_LoRA/resolve/main/Sakimi-Chan_LoRA.safetensors -O /content/stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora/Sakimi-Chan_LoRA.safetensors`</pre><br />
-        embed: <pre>`wget https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors -O /content/stable-diffusion-webui/embeddings/EasyNegative.safetensors`</pre><br />
-        zip outputs folder: <pre>`zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs`</pre>
+        <pre>
+        ```
+        model: wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors<br />
+        lora:  wget https://huggingface.co/embed/Sakimi-Chan_LoRA/resolve/main/Sakimi-Chan_LoRA.safetensors -O /content/stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora/Sakimi-Chan_LoRA.safetensors<br />
+        embed: wget https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors -O /content/stable-diffusion-webui/embeddings/EasyNegative.safetensors<br />
+        zip outputs folder: zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs
+        ```
+        </pre>
         """)
         with gr.Group():
             command = gr.Textbox(show_label=False, max_lines=1, placeholder="command")
