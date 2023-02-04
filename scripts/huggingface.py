@@ -4,6 +4,11 @@ import gradio as gr
 from huggingface_hub import model_info, create_repo, create_branch, upload_folder, upload_file
 from huggingface_hub.utils import RepositoryNotFoundError, RevisionNotFoundError
 from modules import scripts, script_callbacks
+from subprocess import getoutput
+
+def run(command):
+    out = getoutput(f"{command}")
+    return out
 
 def push_folder(folder_from, folder_to, branch, token):
     try:
@@ -95,5 +100,16 @@ def on_ui_tabs():
                 with gr.Row().style(equal_height=True):
                     btn_push_file = gr.Button("Push File To 🤗")
             btn_push_file.click(push_file, inputs=[text_file_from, text_file_to, text_file_name, text_file_branch, text_file_token], outputs=out_file)
+        gr.Markdown(
+        """
+        ### Colab Run Command
+        download file: wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors<br />
+        zip outputs folder: zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs
+        """)
+        with gr.Group():
+            command = gr.Textbox(show_label=False, max_lines=1, placeholder="command")
+            out_text = gr.Textbox(show_label=False)
+            btn_run = gr.Button("run command")
+            btn_run.click(run, inputs=command, outputs=out_text)
     return (huggingface, "Hugging Face", "huggingface"),
 script_callbacks.on_ui_tabs(on_ui_tabs)
