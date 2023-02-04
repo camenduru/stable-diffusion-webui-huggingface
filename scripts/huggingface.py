@@ -104,9 +104,9 @@ def on_ui_tabs():
         """
         ### 🦒 Colab Run Command
         ```py
-        model: wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors<br />
-        lora:  wget https://huggingface.co/embed/Sakimi-Chan_LoRA/resolve/main/Sakimi-Chan_LoRA.safetensors -O /content/stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora/Sakimi-Chan_LoRA.safetensors<br />
-        embed: wget https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors -O /content/stable-diffusion-webui/embeddings/EasyNegative.safetensors<br />
+        model: wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors
+        lora:  wget https://huggingface.co/embed/Sakimi-Chan_LoRA/resolve/main/Sakimi-Chan_LoRA.safetensors -O /content/stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora/Sakimi-Chan_LoRA.safetensors
+        embed: wget https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors -O /content/stable-diffusion-webui/embeddings/EasyNegative.safetensors
         zip outputs folder: zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs
         ```
         """)
