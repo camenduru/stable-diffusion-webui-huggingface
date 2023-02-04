@@ -107,6 +107,7 @@ def on_ui_tabs():
         model: wget https://huggingface.co/ckpt/anything-v4.5-vae-swapped/resolve/main/anything-v4.5-vae-swapped.safetensors -O /content/stable-diffusion-webui/models/Stable-diffusion/anything-v4.5-vae-swapped.safetensors
         lora:  wget https://huggingface.co/embed/Sakimi-Chan_LoRA/resolve/main/Sakimi-Chan_LoRA.safetensors -O /content/stable-diffusion-webui/extensions/sd-webui-additional-networks/models/lora/Sakimi-Chan_LoRA.safetensors
         embed: wget https://huggingface.co/embed/EasyNegative/resolve/main/EasyNegative.safetensors -O /content/stable-diffusion-webui/embeddings/EasyNegative.safetensors
+        vae:   wget https://huggingface.co/ckpt/trinart_characters_19.2m_stable_diffusion_v1/resolve/main/autoencoder_fix_kl-f8-trinart_characters.ckpt -O /content/stable-diffusion-webui/models/VAE/autoencoder_fix_kl-f8-trinart_characters.vae.pt
         zip outputs folder: zip -r /content/outputs.zip /content/stable-diffusion-webui/outputs
         ```
         """)
